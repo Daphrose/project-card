@@ -1,0 +1,186 @@
+*{
+    font-family:'Nunito', sans-serif ;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none; margin: 0;
+    text-decoration: none;
+    transition: all .2s linear;
+
+}
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+}
+body{
+  background:#eee ;
+}
+.container{
+    max-width:1200px;
+    margin:0 auto;
+    padding:3rem 5rem;
+}
+.container .title{
+    font-size: 3.5rem;
+    color: #444;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+.container .cups-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+    gap: 2rem;
+}
+.container .cups-container .cups{
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #fff;
+    box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+    outline: .1rem solid #fff;
+    outline-offset: -1.5rem;
+    cursor: pointer;
+}
+.container .cups-container .cups:hover{
+    outline: .2rem solid #222;
+    outline-offset: 0;
+}
+.container .cups-container .cups img{
+    height: 20rem;
+}
+.container .cups-container.cups:hover img{
+    transform: scale(.7);
+}
+.container .cups-container .cups h3{
+    padding: 2rem 0;
+    font-size: 2rem;
+    color: #444;
+}
+.container .cups-container .cups:hover h3{
+    color: #990099;
+}
+.container .cups-container .cups .price{
+    font-size: 1.5rem;
+    color: #444;
+}
+.cups-preview{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+    min-height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.cups-preview .preview{
+   display: none; 
+   padding:2rem;
+   text-align: center;
+   background: #fff;
+   position: relative;
+   margin: 2rem;
+   width: 40rem;
+
+}
+.cups-preview .preview.active{
+    display: inline-block; 
+ }
+ .cups-preview .preview img{
+    height: 30rem;
+ }
+.close{
+   position: absolute;
+   top: 1rem; right: 1.5rem;
+   cursor: pointer;
+   color: #444; 
+   font-size: 2rem;
+}
+.close:hover{
+    transform: rotate(45deg);
+}
+.cups-preview .preview h3{
+    color: #444;
+    padding: 2rem 0;
+    font-size:1.5rem ;
+}
+.cups-preview .preview p{
+    line-height:1;
+    padding: 1rem 0;
+    font-size: 1rem;
+    color: #777;
+}
+.cups-preview .preview .price{
+    font-size: 1.5rem;
+    color: rgb(16, 16, 116);
+}
+.cups-preview .preview .buttons{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.cups-preview .preview .buttons a{
+    flex: 1 1 16rem;
+    padding: .5rem;
+    font-size:1.8rem;
+    color: #444;
+    border: .1rem solid #444;
+
+}
+.cups-preview .preview .buttons a.add{
+    background: #333;
+    color: #fff;
+}
+.cups-preview .preview .buttons a.add:hover{
+    background: #990099;
+       
+    
+}
+.cups-preview .preview .buttons a.buy:hover{
+    background: #990099;
+    color: #fff;
+}
+.layer{
+    width: 100%;
+
+}
+
+@media screen and (min-width: 401px) and (max-width:990px){
+    .container  .title{
+        font-size: 2.5rem;
+    }
+  
+}
+
+@media screen and (min-width: 0px) and (max-width:200px){
+    h3{
+        font-size: 0.5rem;
+    }
+    .container  .title{
+        font-size: 2rem;
+        color: #444;
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+   
+} 
+@media screen and  (min-width: 201px) and (max-width:400px){
+    .container  .title{
+        font-size: 1.4rem;
+        color: green;
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+  
+}
+
+
+
